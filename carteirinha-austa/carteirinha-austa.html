@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&display=swap' rel='stylesheet'>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        html {
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        @page {
+            size: A4;
+            height: 297mm;
+            width: 210mm;
+            margin: 50pt;
+        }
+
+        .container {
+
+            text-align: center;
+            font-family: 'Comfortaa';
+            border-radius: 20px;
+            background-color: #00c4f8;
+            padding: 1em 3em;
+            max-width: 600px; 
+            color: white;
+        }
+
+        .logo{
+            margin: 0 auto;
+            width: 80% ;
+        }
+
+        .ans {
+            padding-top: 20px;
+            text-align: right;
+        }
+
+        .title {
+            color: #00c4f8;
+            margin-bottom: 10px;
+            color: 00c4f8 ;
+            text-align: center;
+            font-size: 22px;
+        }
+
+      
+        .dados p{
+            font-size: 22px;
+            text-align: left;
+            content: ':';
+            font-weight: 300;
+        }
+
+        .qrcode {
+            padding-top: 10px;
+            width: 30%;
+            max-width: 100px;
+        }
+        
+
+    </style>
+
+    <title>Carteirinha Austa</title>
+</head>
+<body>
+    <header>
+        <div class='container-header'>
+            <h1 class='title'>
+                Carteirinha de {{ name-user }}
+            </h1>
+        </div>
+        <hr>
+    </header>
+    <div class='container'>
+        <div>
+            <div>
+                <img class='logo' src='https://omni-pub-bkt.s3.us-east-2.amazonaws.com/omni/austa/operadora/logo_presentation.svg'>
+            </div>
+            <div class='dados'>
+                <p><strong>Código de Usuário</strong>: {{ name-user }} </p>
+                <p><strong>Nome</strong>: {{name-user}}</p>
+                <p><strong>Dt.Nascimento</strong>: {{birth-user}}</p>
+                <p><strong>Vigência</strong>: {{vigencia-user}}</p>
+                <p><strong>Plano</strong>: {{plan-user}}</p>
+                <p><strong>Segmentação</strong>: {{segm-user}}</p>
+                <p><strong>CNS</strong>: {{plan-user}}</p>
+            </div>
+            <div class='subdados'>
+                <div>
+                    <img class='qrcode' src='https://miro.medium.com/v2/resize:fit:640/0*zPG9dqz508rmRR70.' alt='qrcode'>    
+                </div>
+                <div class='ans'>
+                    <img  src='https://omni-pub-bkt.s3.us-east-2.amazonaws.com/omni/austa/operadora/ans.png' alt='ans nº32741-7'>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+</body>
+</html>
